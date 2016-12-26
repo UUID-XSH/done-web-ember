@@ -1,22 +1,12 @@
 import Ember from 'ember';
 
-let projects = [
-  {
-    name: 't1'
-  },
-  {
-    name: 't2'
-  }
-];
-
-
 export default Ember.Route.extend({
-
+  projectService : Ember.inject.service(),
 
   model () {
-    let v = {};
-    v.projects = projects;
-    console.log(v);
+    var v = {};
+    v.projects = [];
+    console.log(projectService);
     return v;
   }
 
