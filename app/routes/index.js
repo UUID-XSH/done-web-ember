@@ -5,8 +5,7 @@ export default Ember.Route.extend({
 
   model () {
     var v = {};
-    v.projects = [];
-    console.log(projectService);
+    v.projects = this.get('projectService').all();
     return v;
   }
 
